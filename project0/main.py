@@ -4,15 +4,11 @@ import tempfile
 import sqlite3
 import urllib.request
 def main(url):
-
-
         # Download data
     incident_data = fetchincidents(url)
-              # Extract data
+        # Extract data
     incidents = extractincidents(incident_data)
-                    
      # Create new database
-    print("Hello")
     db = createdb()
                             
      #Insert data
@@ -37,7 +33,7 @@ def extractincidents(data):
     pdfReader = PyPDF2.pdf.PdfFileReader(fp)
     total_pages=pdfReader.getNumPages()
     incidents=[]
-    # Get the first page
+    # Get the data from each page
     for i in range(0,total_pages):
         if(i==0):
             page1 = pdfReader.getPage(i).extractText()
@@ -58,8 +54,6 @@ def extractincidents(data):
             incident=page.split('\n')
             incident=incident[:-1]
             incidents.extend(incident)
-              
-    #print(incidents)
     return incidents    
 
 def createdb():
@@ -104,8 +98,10 @@ def status(db):
     cur = con.cursor()
     rows =  cur.execute("SELECT nature,COUNT(nature) FROM incidents GROUP BY nature ORDER BY nature")
     for row in rows:
-        print(row)
-
+        print(row[0],"|",row[1])
+    cur.execute("DROP TABLE incidents")
+    con.commit()
+    con.close()
 
 if (__name__ == '__main__'):
     parser = argparse.ArgumentParser()
