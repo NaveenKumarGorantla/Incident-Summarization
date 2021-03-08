@@ -1,7 +1,7 @@
 # cs5293sp21-project0
 
 Name - NAVEEN KUMAR GORANTLA
-OU ID - 113497607
+Email - Naveen.Kumar.Gorantla-1@ou.edu
 
 PROJECT SUMMARY: To Build a function to collect only incidents data from the regular reports of incidents. The data is hosted on the website of Oklahoma Police Department,
  Norman in the form of PDF. In this project we use PyPDF2 Library to extract data from the PDF and python functions to do the following.
@@ -24,6 +24,7 @@ Running the program-
 Code for the above functionality is available in this Github Repository.
 
 Command line to Run - pipenv run python project0/main.py --incidents <url>
+
 Sample < url> https://www.normanok.gov/sites/default/files/documents/2021-03/2021-03-03_daily_incident_summary.pdf
 
 Required Python Packages to Install
