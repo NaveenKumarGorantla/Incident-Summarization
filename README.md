@@ -23,7 +23,7 @@ Assumptions: Assuming the the data format in the PDF Report from oklahoma Police
 Running the program- 
 Code for the above functionality is available in this Github Repository.
 
-Command line to Run - pipenv run python project0/main.py --incidents <url>
+Command line to Run - pipenv run python project0/main.py --incidents "url"
 
 Sample < url> https://www.normanok.gov/sites/default/files/documents/2021-03/2021-03-03_daily_incident_summary.pdf
 
