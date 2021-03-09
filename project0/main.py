@@ -54,7 +54,6 @@ def extractincidents(data):
             incident=page.split('\n')
             incident=incident[:-1]
             incidents.extend(incident)
-    print(type(incidents))
     return incidents    
 
 def createdb():
