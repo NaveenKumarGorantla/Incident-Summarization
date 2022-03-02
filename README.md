@@ -1,4 +1,4 @@
-# cs5293sp21-project0
+# Web Scraping Incident data
 
 ## Name - NAVEEN KUMAR GORANTLA
 ## Email - Naveen.Kumar.Gorantla-1@ou.edu
